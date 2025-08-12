@@ -1,3 +1,4 @@
+nohup: ignoring input
 
 > software-company@0.0.0 start
 > ng serve --host 0.0.0.0 --port 55346
@@ -10,3 +11,27 @@ Binding this server to an open connection can result in compromising your applic
 computer. Using a different host than the one passed to the "--host" flag might result in
 websocket connection issues.
     
+❯ Building...
+✔ Building...
+Initial chunk files | Names         | Raw size
+main.js             | main          | 25.43 kB | 
+styles.css          | styles        |  8.10 kB | 
+polyfills.js        | polyfills     | 95 bytes | 
+
+                    | Initial total | 33.63 kB
+
+Lazy chunk files    | Names         | Raw size
+chunk-4ZLNO7GS.js   | home          | 15.15 kB | 
+chunk-5K452R5P.js   | services      |  1.75 kB | 
+chunk-FTXL2DFT.js   | products      |  1.75 kB | 
+chunk-THEZ3X6Y.js   | careers       |  1.73 kB | 
+chunk-ILNGV73F.js   | contact       |  1.73 kB | 
+chunk-XGXW237N.js   | about         |  1.68 kB | 
+chunk-3JTLFQTB.js   | blog          |  1.65 kB | 
+
+Application bundle generation complete. [1.030 seconds]
+
+Watch mode enabled. Watching for file changes...
+NOTE: Raw file sizes do not reflect development server per-request transformations.
+  ➜  Local:   http://localhost:55346/
+  ➜  Network: http://172.17.0.4:55346/
