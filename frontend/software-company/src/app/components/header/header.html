@@ -1,0 +1,37 @@
+
+<mat-toolbar color="primary" class="header-toolbar">
+  <div class="container">
+    <div class="logo-section">
+      <a routerLink="/home" class="logo">
+        <mat-icon>code</mat-icon>
+        <span>TechCorp</span>
+      </a>
+    </div>
+
+    <nav class="desktop-nav">
+      <a mat-button routerLink="/home" routerLinkActive="active">Home</a>
+      <a mat-button routerLink="/about" routerLinkActive="active">About</a>
+      <a mat-button routerLink="/services" routerLinkActive="active">Services</a>
+      <a mat-button routerLink="/products" routerLinkActive="active">Products</a>
+      <a mat-button routerLink="/careers" routerLinkActive="active">Careers</a>
+      <a mat-button routerLink="/blog" routerLinkActive="active">Blog</a>
+      <a mat-button routerLink="/contact" routerLinkActive="active">Contact</a>
+    </nav>
+
+    <div class="mobile-menu">
+      <button mat-icon-button [matMenuTriggerFor]="mobileMenu">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu #mobileMenu="matMenu">
+        <a mat-menu-item routerLink="/home">Home</a>
+        <a mat-menu-item routerLink="/about">About</a>
+        <a mat-menu-item routerLink="/services">Services</a>
+        <a mat-menu-item routerLink="/products">Products</a>
+        <a mat-menu-item routerLink="/careers">Careers</a>
+        <a mat-menu-item routerLink="/blog">Blog</a>
+        <a mat-menu-item routerLink="/contact">Contact</a>
+      </mat-menu>
+    </div>
+  </div>
+</mat-toolbar>
+
