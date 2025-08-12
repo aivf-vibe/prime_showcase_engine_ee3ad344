@@ -1,1 +1,57 @@
-<p>blog works!</p>
+
+
+
+
+<section class="hero">
+  <div class="container">
+    <h1>TechCorp Blog</h1>
+    <p>Insights, tutorials, and industry trends from our expert team</p>
+  </div>
+</section>
+
+<section class="blog-content">
+  <div class="container">
+    <div class="blog-grid">
+      <article class="blog-card" *ngFor="let post of blogPosts">
+        <div class="blog-image">
+          <mat-icon>article</mat-icon>
+        </div>
+        <div class="blog-content">
+          <div class="blog-meta">
+            <span class="category">{{post.category}}</span>
+            <span class="date">{{post.createdAt | date:'MMM dd, yyyy'}}</span>
+          </div>
+          <h3>{{post.title}}</h3>
+          <p>{{post.excerpt}}</p>
+          <div class="blog-footer">
+            <span class="author">By {{post.author}}</span>
+            <span class="read-time">{{post.readTime}} min read</span>
+          </div>
+          <button mat-button color="primary" (click)="readMore(post)">
+            Read More
+          </button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="newsletter">
+  <div class="container">
+    <div class="newsletter-content">
+      <h2>Stay Updated</h2>
+      <p>Subscribe to our newsletter for the latest insights and updates</p>
+      <form class="newsletter-form">
+        <mat-form-field appearance="outline">
+          <mat-label>Email address</mat-label>
+          <input matInput type="email" placeholder="Enter your email">
+        </mat-form-field>
+        <button mat-raised-button color="accent" type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+
+

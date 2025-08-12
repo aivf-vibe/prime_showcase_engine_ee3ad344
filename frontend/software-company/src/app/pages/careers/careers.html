@@ -1,1 +1,82 @@
-<p>careers works!</p>
+
+
+
+<section class="hero">
+  <div class="container">
+    <h1>Join Our Team</h1>
+    <p>Build your career with innovative minds and cutting-edge technologies</p>
+  </div>
+</section>
+
+<section class="why-join">
+  <div class="container">
+    <h2>Why Work at TechCorp?</h2>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <mat-icon>trending_up</mat-icon>
+        <h3>Career Growth</h3>
+        <p>Continuous learning opportunities and clear career progression paths</p>
+      </div>
+      <div class="benefit-card">
+        <mat-icon>work</mat-icon>
+        <h3>Flexible Work</h3>
+        <p>Remote work options and flexible schedules to maintain work-life balance</p>
+      </div>
+      <div class="benefit-card">
+        <mat-icon>health_and_safety</mat-icon>
+        <h3>Health & Wellness</h3>
+        <p>Comprehensive health insurance and wellness programs</p>
+      </div>
+      <div class="benefit-card">
+        <mat-icon>emoji_events</mat-icon>
+        <h3>Competitive Benefits</h3>
+        <p>Attractive salary packages and performance bonuses</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="open-positions">
+  <div class="container">
+    <h2>Open Positions</h2>
+    <div class="positions-list">
+      <div class="position-card" *ngFor="let position of positions">
+        <div class="position-header">
+          <h3>{{position.title}}</h3>
+          <span class="position-type">{{position.type}}</span>
+        </div>
+        <p class="position-description">{{position.description}}</p>
+        <div class="position-details">
+          <span class="location"><mat-icon>location_on</mat-icon> {{position.location}}</span>
+          <span class="experience"><mat-icon>work</mat-icon> {{position.experience}}</span>
+          <span class="salary"><mat-icon>attach_money</mat-icon> {{position.salary}}</span>
+        </div>
+        <button mat-raised-button color="primary" (click)="applyForPosition(position)">
+          Apply Now
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="culture">
+  <div class="container">
+    <h2>Our Culture</h2>
+    <div class="culture-content">
+      <div class="culture-text">
+        <p>At TechCorp, we foster a culture of innovation, collaboration, and continuous learning. We believe in empowering our team members to take ownership of their work and make meaningful contributions to our clients' success.</p>
+        
+        <h3>Our Values</h3>
+        <ul>
+          <li><strong>Innovation:</strong> We embrace new technologies and creative solutions</li>
+          <li><strong>Excellence:</strong> We strive for the highest quality in everything we do</li>
+          <li><strong>Collaboration:</strong> We work together to achieve common goals</li>
+          <li><strong>Growth:</strong> We continuously learn and improve</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+

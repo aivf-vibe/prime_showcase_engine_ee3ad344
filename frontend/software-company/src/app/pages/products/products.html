@@ -1,1 +1,71 @@
-<p>products works!</p>
+
+
+<section class="hero">
+  <div class="container">
+    <h1>Our Products</h1>
+    <p>Innovative software products designed to solve real business challenges</p>
+  </div>
+</section>
+
+<section class="products-content">
+  <div class="container">
+    <div class="products-grid">
+      <div class="product-card" *ngFor="let product of products">
+        <div class="product-image">
+          <mat-icon>{{product.icon}}</mat-icon>
+        </div>
+        <div class="product-info">
+          <h3>{{product.name}}</h3>
+          <p class="product-description">{{product.description}}</p>
+          <div class="product-features">
+            <span class="feature-tag" *ngFor="let feature of product.features">{{feature}}</span>
+          </div>
+          <div class="product-price">
+            <span class="price">{{product.price}}</span>
+            <span class="period">{{product.pricingPeriod}}</span>
+          </div>
+          <button mat-raised-button color="primary" (click)="openProductDetails(product)">
+            View Details
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="container">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          <p>"TechCorp's products have transformed our business operations. The ROI has been incredible."</p>
+        </div>
+        <div class="testimonial-author">
+          <h4>John Smith</h4>
+          <p>CEO, TechStart Inc.</p>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          <p>"The scalability and reliability of their solutions exceeded our expectations."</p>
+        </div>
+        <div class="testimonial-author">
+          <h4>Maria Garcia</h4>
+          <p>CTO, Global Solutions</p>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          <p>"Outstanding support and continuous innovation. Highly recommended!"</p>
+        </div>
+        <div class="testimonial-author">
+          <h4>David Wilson</h4>
+          <p>Director, InnovateCorp</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+

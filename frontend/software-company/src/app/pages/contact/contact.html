@@ -1,1 +1,101 @@
-<p>contact works!</p>
+<section class="hero">
+  <div class="container">
+    <h1>Get In Touch</h1>
+    <p>Lets discuss how we can help bring your ideas to life</p>
+  </div>
+</section>
+
+<section class="contact-content">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2>Contact Information</h2>
+        <div class="info-item">
+          <mat-icon>location_on</mat-icon>
+          <div>
+            <h3>Address</h3>
+            <p>123 Tech Street, Innovation District<br>San Francisco, CA 94105</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <mat-icon>phone</mat-icon>
+          <div>
+            <h3>Phone</h3>
+            <p>+1 (555) 123-4567</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <mat-icon>email</mat-icon>
+          <div>
+            <h3>Email</h3>
+            <p>hello@techcorp.com</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <mat-icon>schedule</mat-icon>
+          <div>
+            <h3>Business Hours</h3>
+            <p>Monday - Friday: 9:00 AM - 6:00 PM PST</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <h2>Send Us a Message</h2>
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+          <mat-form-field appearance="outline">
+            <mat-label>Full Name</mat-label>
+            <input matInput formControlName="name" required>
+            <mat-error *ngIf="contactForm.get(name)?.hasError(required)">
+              Name is required
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Email Address</mat-label>
+            <input matInput type="email" formControlName="email" required>
+            <mat-error *ngIf="contactForm.get(email)?.hasError(required)">
+              Email is required
+            </mat-error>
+            <mat-error *ngIf="contactForm.get(email)?.hasError(email)">
+              Please enter a valid email
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Subject</mat-label>
+            <input matInput formControlName="subject" required>
+            <mat-error *ngIf="contactForm.get(subject)?.hasError(required)">
+              Subject is required
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Message</mat-label>
+            <textarea matInput formControlName="message" rows="5" required></textarea>
+            <mat-error *ngIf="contactForm.get(message)?.hasError(required)">
+              Message is required
+            </mat-error>
+          </mat-form-field>
+
+          <button mat-raised-button color="primary" type="submit" [disabled]="!contactForm.valid">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="map-section">
+  <div class="container">
+    <h2>Find Us</h2>
+    <div class="map-container">
+      <div class="map-placeholder">
+        <mat-icon>map</mat-icon>
+        <p>Interactive Map</p>
+        <p>123 Tech Street, San Francisco, CA</p>
+      </div>
+    </div>
+  </div>
+</section>
